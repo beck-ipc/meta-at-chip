@@ -2,7 +2,7 @@ require recipes-core/images/core-image-minimal.bb
 
 LICENSE = "MIT"
 
-DESCRIPTION = "Small console image for evaluaton purposes."
+DESCRIPTION = "Small console image for @CHIP evaluaton purposes."
 
 IMAGE_FEATURES += "package-management ssh-server-dropbear"
 
