@@ -1,0 +1,9 @@
+LINUX@CHIP Yocto BSP initialised...
+
+Common targets are:
+    core-image-minimal     (a very basic file system image)
+    meta-toolchain         (a basic cross toolchain)
+    at-chip-console-image  (our own more functional example filesystem)
+
+
+You can also run generated qemu images with a command like 'runqemu qemux86'
