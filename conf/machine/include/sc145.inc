@@ -4,7 +4,7 @@ MACHINEOVERRIDES =. "mx6:mx6ul:"
 include conf/machine/include/imx-base.inc
 include conf/machine/include/tune-cortexa7.inc
 
-MACHINE_FEATURES += " serial rtc"
+MACHINE_FEATURES += " uboot serial rtc"
 
 IMAGE_FSTYPES ?= " ubifs"
 
@@ -27,11 +27,11 @@ KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
 IMAGE_INSTALL_append = " kernel-image-zimage"
 
 
-# U-Boot dummy configuration to make buildsystem happy
-UBOOT_SUFFIX = "img"
-SPL_BINARY = "SPL"
+# U-Boot configuration
+PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-beck"
+UBOOT_SUFFIX = "bin"
+SPL_BINARY = ""
 UBOOT_MAKE_TARGET = ""
-UBOOT_CONFIG ??= "sd"
-UBOOT_CONFIG[sd] = "mx6ul_14x14_evk_config,sdcard"
-UBOOT_CONFIG[qspi1] = "mx6ul_14x14_evk_qspi1_config"
-UBOOT_CONFIG[mfgtool] = "mx6ul_14x14_evk_config"
+UBOOT_CONFIG ??= "qspi"
+UBOOT_CONFIG[sd] = "beck_sc145_sd_defconfig"
+UBOOT_CONFIG[qspi] = "beck_sc145_defconfig"
