@@ -1,5 +1,4 @@
 DESCRIPTION = "Linux kernel for Beck IPC Hardware"
-KERNEL_IMAGETYPE = "zImage"
 
 require recipes-kernel/linux/linux.inc
 require recipes-kernel/linux/linux-dtb.inc
