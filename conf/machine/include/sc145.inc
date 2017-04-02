@@ -12,11 +12,11 @@ FLASH_ERASEBLOCK = "0x10000"
 # For NOR flash we need the cleanmarkers so override the defaults
 EXTRA_IMAGECMD_jffs2 = "-p -l -e ${FLASH_ERASEBLOCK}"
 
-UBI_VOLNAME ?= "RootFs"
-MKUBIFS_ARGS = " -c 480 -e 65472 -m 1"
+UBI_VOLNAME ?= "rootfs"
+MKUBIFS_ARGS = " -c 1000 -e 65408 -m 1"
 UBINIZE_ARGS = " -p 64KiB -m 1 -O64"
 
-SERIAL_CONSOLE ?= "19200 ttymxc00"
+SERIAL_CONSOLE ?= "115200 ttymxc0"
 USE_VT ?= "0"
 UBOOT_ENTRYPOINT = "0x80008000"
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-beck"
