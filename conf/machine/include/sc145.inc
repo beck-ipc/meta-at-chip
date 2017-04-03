@@ -4,6 +4,7 @@ MACHINEOVERRIDES =. "mx6:mx6ul:"
 include conf/machine/include/imx-base.inc
 include conf/machine/include/tune-cortexa7.inc
 
+
 MACHINE_FEATURES += " uboot serial rtc"
 
 IMAGE_FSTYPES ?= " ubifs"
@@ -18,11 +19,11 @@ UBINIZE_ARGS = " -p 64KiB -m 1 -O64"
 
 SERIAL_CONSOLE ?= "115200 ttymxc0"
 USE_VT ?= "0"
-UBOOT_ENTRYPOINT = "0x80008000"
+UBOOT_ENTRYPOINT := "0x80800000"
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-beck"
 PREFERRED_VERSION_linux-beck ?= "4.9%"
 KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
-KERNEL_IMAGETYPE = "uImage"
+KERNEL_IMAGETYPE := "uImage"
 
 # install images to filesystem
 IMAGE_INSTALL_append = " kernel-image-uimage kernel-devicetree"
