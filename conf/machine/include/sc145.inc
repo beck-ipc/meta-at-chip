@@ -17,7 +17,7 @@ UBI_VOLNAME ?= "rootfs"
 MKUBIFS_ARGS = " -c 1000 -e 65408 -m 1"
 UBINIZE_ARGS = " -p 64KiB -m 1 -O64"
 
-SERIAL_CONSOLE ?= "115200 ttymxc0"
+SERIAL_CONSOLE ?= "115200 ttymxc3"
 USE_VT ?= "0"
 UBOOT_ENTRYPOINT := "0x80800000"
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-beck"
