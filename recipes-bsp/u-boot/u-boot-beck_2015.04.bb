@@ -16,7 +16,7 @@ COMPATIBLE_MACHINE = "(sc145-db150)"
 PROVIDES += "u-boot"
 
 PV = "v2015.04-linux-at-chip-sc145+gitr${SRCPV}"
-SRCREV = "720868b700af8ddab9af17ad63fdd4e9f4549175"
+SRCREV = "c6917ed6b1c6e93a9513d1a7d4c4c29fc9b8ad2e"
 SRCBRANCH = "2015.04-rel_imx_3.14.38_6ul_ga-linux-at-chip-sc145"
 
 SRC_URI = "git://github.com/beck-ipc/uboot-at-chip.git;protocol=https;branch=${SRCBRANCH}"
