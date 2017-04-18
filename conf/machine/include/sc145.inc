@@ -30,9 +30,9 @@ IMAGE_INSTALL_append = " kernel-image-uimage kernel-devicetree"
 
 # U-Boot configuration
 PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-beck"
-UBOOT_SUFFIX = "bin"
 SPL_BINARY = ""
 UBOOT_MAKE_TARGET = "qspi-u-boot.imx"
+UBOOT_BINARY = "qspi-u-boot.imx"
 UBOOT_CONFIG ??= "qspi"
 UBOOT_CONFIG[sd] = "beck_sc145_sd_defconfig"
-UBOOT_CONFIG[qspi] = "beck_sc145_defconfig"
+UBOOT_CONFIG[qspi] = "beck_sc145_defconfig,,qspi-u-boot.imx"
