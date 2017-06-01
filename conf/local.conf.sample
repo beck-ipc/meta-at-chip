@@ -18,6 +18,10 @@
 # of emulated machines available which can boot and run in the QEMU emulator:
 #
 
+# No audio codec on base board an no imx audio support in kernel
+DISTRO_FEATURES_remove = "alsa wayland"
+
+
 #DISTRO_FEATURES_append = " systemd"
 #VIRTUAL-RUNTIME_init_manager = "systemd"
 #DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
