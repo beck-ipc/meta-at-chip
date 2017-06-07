@@ -11,12 +11,12 @@ order to provide support for additinal features and specific support for Beck IP
 HOMEPAGE = "https://github.com/beck-ipc/uboot-at-chip"
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://Licenses/README;md5=c7383a594871c03da76b3707929d2919"
-COMPATIBLE_MACHINE = "(sc145-db150)"
+COMPATIBLE_MACHINE = "(sc145-db150|sc165-db150)"
 
 PROVIDES += "u-boot"
 
 PV = "v2015.04-linux-at-chip-sc145+gitr${SRCPV}"
-SRCREV = "f0b1d2e551a513d73119320ce15c4a2e19a8284d"
+SRCREV = "3bb78bf7be71b39bc22e83b4074e88e62b6e571c"
 SRCBRANCH = "2015.04-rel_imx_3.14.38_6ul_ga-linux-at-chip-sc145"
 
 SRC_URI = "git://github.com/beck-ipc/uboot-at-chip.git;protocol=https;branch=${SRCBRANCH}"
