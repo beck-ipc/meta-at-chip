@@ -13,5 +13,6 @@ BBLAYERS ?= " \
   ${BSPDIR}/meta-poky \
   ${BSPDIR}/meta-yocto-bsp \
   ${BSPDIR}/meta-freescale \
+  ${BSPDIR}/meta-webstuff \
   ${BSPDIR}/meta-at-chip \
   "
