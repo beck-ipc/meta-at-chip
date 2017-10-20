@@ -25,5 +25,5 @@ echo out > /sys/class/gpio/gpio501/direction
 echo out > /sys/class/gpio/gpio502/direction
 echo out > /sys/class/gpio/gpio503/direction
 
-# run application
-
+# run Qt application example if present
+cd /usr/share/qt5/examples/gui/analogclock && ./analogclock -platform linuxfb
