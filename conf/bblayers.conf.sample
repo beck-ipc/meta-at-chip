@@ -12,7 +12,8 @@ BBLAYERS ?= " \
   ${BSPDIR}/meta-openembedded/meta-oe \
   ${BSPDIR}/meta-poky \
   ${BSPDIR}/meta-yocto-bsp \
-  ${BSPDIR}/meta-freescale \
+  ${BSPDIR}/meta-qt5 \
   ${BSPDIR}/meta-webstuff \
+  ${BSPDIR}/meta-freescale \
   ${BSPDIR}/meta-at-chip \
   "
