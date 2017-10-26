@@ -19,7 +19,7 @@
 #
 
 # No audio codec on base board an no imx audio support in kernel
-DISTRO_FEATURES_remove = "alsa wayland"
+DISTRO_FEATURES_remove = "alsa wayland opengl"
 
 
 #DISTRO_FEATURES_append = " systemd"
