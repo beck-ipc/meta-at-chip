@@ -10,6 +10,7 @@ BBFILES ?= ""
 BBLAYERS ?= " \
   ${BSPDIR}/meta \
   ${BSPDIR}/meta-openembedded/meta-oe \
+  ${BSPDIR}/meta-openembedded/meta-python \
   ${BSPDIR}/meta-poky \
   ${BSPDIR}/meta-yocto-bsp \
   ${BSPDIR}/meta-qt5 \
