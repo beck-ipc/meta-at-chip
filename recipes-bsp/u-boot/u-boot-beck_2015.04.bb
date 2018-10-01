@@ -11,7 +11,7 @@ order to provide support for additinal features and specific support for Beck IP
 HOMEPAGE = "https://github.com/beck-ipc/uboot-at-chip"
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://Licenses/README;md5=c7383a594871c03da76b3707929d2919"
-COMPATIBLE_MACHINE = "(sc145-db150|sc165-db150|sc165-cti1*)"
+COMPATIBLE_MACHINE = "(sc145-db150|sc165-db150|sc165-cti1*|sc145-cti1*)"
 
 PROVIDES += "u-boot"
 
