@@ -1,7 +1,6 @@
 DESCRIPTION = "Linux kernel for Beck IPC Hardware"
 
 require recipes-kernel/linux/linux.inc
-require recipes-kernel/linux/linux-dtb.inc
 
 
 COMPATIBLE_MACHINE = "(sc145-db150|sc165-db150|sc165-cti1*|sc145-cti1*)"
