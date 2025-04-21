@@ -1,0 +1,7 @@
+# Simple disk layout to move everything but bootloader to µSD card
+#
+#part u-boot --source rawcopy --sourceparams="file=imx-boot.tagged" --ondisk mmcblk --no-table --align ${IMX_BOOT_SEEK}
+part /boot --source bootimg-partition --ondisk mmcblk --fstype=vfat --label boot --active --align 8192 --fixed-size 256
+part / --source rootfs --ondisk mmcblk --fstype=ext4 --label root --align 8192 --mkfs-extraopts="${EXTRA_IMAGECMD:ext4}"
+
+bootloader --ptable msdos
