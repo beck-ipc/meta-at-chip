@@ -9,7 +9,7 @@ S = "${WORKDIR}/git"
 SRCREV = "abe529be6c3c19d12388042c09ca51eb609acf58"
 PV = "1.0+git${SRCPV}"
 
-SRC_URI = "git://github.com/beck-ipc/at-chip-webdemo.git;protocol=https \
+SRC_URI = "git://github.com/beck-ipc/at-chip-webdemo.git;protocol=https;branch=master \
            file://lighttpd.conf \
           "
 
