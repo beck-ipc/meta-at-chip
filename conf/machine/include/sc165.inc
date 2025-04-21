@@ -1,9 +1,7 @@
-
 MACHINEOVERRIDES =. "mx6:mx6ul:"
 
-include conf/machine/include/imx-base.inc
-include conf/machine/include/tune-cortexa7.inc
-
+require conf/machine/include/imx-base.inc
+require conf/machine/include/arm/armv7a/tune-cortexa7.inc
 
 MACHINE_FEATURES += " uboot serial rtc"
 
@@ -11,7 +9,7 @@ IMAGE_FSTYPES ?= " ubifs"
 
 FLASH_ERASEBLOCK = "0x10000"
 # For NOR flash we need the cleanmarkers so override the defaults
-EXTRA_IMAGECMD_jffs2 = "-p -l -e ${FLASH_ERASEBLOCK}"
+EXTRA_IMAGECMD:jffs2 = "-p -l -e ${FLASH_ERASEBLOCK}"
 
 UBI_VOLNAME ?= "rootfs"
 MKUBIFS_ARGS = " -c 4000 -e 65408 -m 1"
@@ -26,7 +24,7 @@ KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
 KERNEL_IMAGETYPE := "uImage"
 
 # install images to filesystem
-IMAGE_INSTALL_append = " kernel-image-uimage kernel-devicetree"
+IMAGE_INSTALL:append = " kernel-image-uimage kernel-devicetree"
 
 # U-Boot configuration
 PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-beck"
@@ -36,3 +34,4 @@ UBOOT_BINARY = "qspi-u-boot.imx"
 UBOOT_CONFIG ??= "qspi"
 UBOOT_CONFIG[sd] = "beck_sc165_sd_defconfig"
 UBOOT_CONFIG[qspi] = "beck_sc165_defconfig,,qspi-u-boot.imx"
+UBOOT_SUFFIX:pn-u-boot-fslc = "img"
