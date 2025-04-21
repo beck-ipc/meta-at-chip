@@ -20,8 +20,14 @@ PV = "v2015.04-linux-at-chip-sc145+gitr${SRCPV}"
 SRCREV = "b7f7d989cf258115b9d3f130807acbf42462e581"
 SRCBRANCH = "2015.04-rel_imx_3.14.38_6ul_ga-linux-at-chip-sc145"
 
-SRC_URI = "git://github.com/beck-ipc/uboot-at-chip.git;protocol=https;branch=${SRCBRANCH}"
+SRC_URI = "git://github.com/beck-ipc/uboot-at-chip.git;protocol=https;branch=${SRCBRANCH}\
+           file://e0d20dc1521e74b82dbd69be53a048847798a90a.patch"
 
 S = "${WORKDIR}/git"
 
+UBOOT_INITIAL_ENV = ''
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+do_configure:prepend () {
+   cp ${S}/include/linux/compiler-gcc6.h ${S}/include/linux/compiler-gcc13.h
+}
