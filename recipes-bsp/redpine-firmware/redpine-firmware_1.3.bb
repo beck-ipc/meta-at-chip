@@ -4,8 +4,6 @@ LICENSE = "CLOSED"
 
 inherit bin_package
 
-PACKAGE_ARCH = "all"
-
 SRC_URI = "\
            file://RS9113_AP_BT_DUAL_MODE.rps \
            file://RS9113_WLAN_BT_DUAL_MODE.rps \
